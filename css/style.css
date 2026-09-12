@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  color: #5a3e36;
-  background: #fff4e2;
-  font-family: Arial, sans-serif;
+  background: #f6f0e8;
+  color: #2f2118;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .page {
@@ -12,28 +12,51 @@ body {
 }
 
 .hero {
-  padding: 36px;
-  color: white;
-  background: #d96c8a;
   border-radius: 24px;
+  background: linear-gradient(135deg, #4b2e21, #8d5a3b);
+  color: white;
+  padding: 36px;
 }
 
 .eyebrow {
   margin: 0 0 8px;
-  letter-spacing: 0.14em;
   text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 8vw, 4rem);
+}
+
+.lead {
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.cta-button {
+  border: 0;
+  border-radius: 999px;
+  background: #ffd166;
+  color: #2f2118;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .products {
-  padding-left: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
 }
 
-button {
-  padding: 12px 18px;
-  color: #5a3e36;
-  font-weight: 700;
-  cursor: pointer;
-  background: #ffd6a5;
-  border: 0;
-  border-radius: 999px;
+.product-card {
+  border: 1px solid #ead8c3;
+  border-radius: 18px;
+  background: white;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgb(47 33 24 / 10%);
 }
