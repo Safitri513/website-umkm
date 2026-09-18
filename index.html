@@ -7,30 +7,61 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="page">
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Donat Manis</a>
+        <ul>
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li> 
+          <li><a href="#profil">Profil</a></l>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="konten" class="page">
       
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-title">
         <p class="eyebrow">UMKM Pekalongan</p>
-        <h1>Donat Manis</h1>
-        <p class="lead">
-          Donat lezat dengan berbagai rasa untuk menemani hari kamu.</p>
-        <button id="promoButton" class="cta-button">Lihat promo donat hari ini
-      </button>
+        <h1 id="hero-title">Donat Manis</h1>
+        <p>Donat lezat dengan berbagai rasa untuk menemani hari kamu.</p>
+        <div class="hero-actions">
+          <button id="promoButton" type="button">Lihat promo donat hari ini</button>
+          <a href="#profil">Lihat Kontak Singkat</a>
+        </div>       
       </section>
+
       <section class="products" aria-label="Produk unggulan ">
         <article class="product-card">
-        <h2>Menu Donat</h2>
-          <p>Donat Cokelat - Rp10.000</p>
-          <p>Donat Keju - Rp12.000</p>
-          <p>Donat Stroberi - Rp 12.000</p>
-        <article>
-      
-      <article class="product-card">
-        <h2>Jam Buka & Lokasi</h2> 
+          <h2>Menu Donat</h2>
+          <div class="product-list">
+            <article class="product-card">
+              <h3>Donat Original</h3>
+              <p>Donat dengan rasa Original yang lezat.</p>
+              <p class="price">Rp10.000</p>
+            </article>
+
+            <article class="product-card">
+              <h3>Donat Kentang</h3>
+              <p>Donat dengan perpaduan kentang yang gurih.</p>
+              <p class="price">Rp12.000</p>
+            </article>
+          </div>
+      </section>
+
+      <section id="profil" class="contact" aria-labelledby="kontak-title">
+        <h2 id="kontak-title">Kontak Singkat</h2>
         <p>Jam Buka : 08.00 - 20.00</p>
-        <p>Lokasi : Jl. Raya Pekalongan , Wonopringgo</p>
+        <p>Lokasi   : Jl. Raya Pekalongan , Wonopringgo</p>
+        <p>WhatsApp :
+          <a  href="https://wa.me/6285746508731"> 
+            Hubungi Donat Manis melalui WhatsApp </a>
+        </p> 
       </section>
     </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 Donat Manis. Data pada halaman ini bersifat dummy.</p>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
