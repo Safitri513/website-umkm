@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Galeri Donat Manis - Website UMKM</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <!-- Link untuk melewati navigasi dan langsung menuju konten -->
+        <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+        <!-- Header dan navigasi website -->
+        <header class="site-header">
+            <nav class="nav" aria-label="Navigasi utama">
+                <a class="brand" href="index.html">Donat Manis</a>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a aria-current="page" href="galeri.html">Galeri</a></li>
+                </ul>
+            </nav>        </header>
+
+        <!-- Konten utama halaman Galeri -->
+        <main id="konten" class="page">
+            <h1>Galeri Donat Manis</h1>
+            <section aria-labelledby="media-title">
+                <h2 id="media-title">Media Usaha</h2>
+                <div class="gallery-list">
+                    <figure class="media-card">
+                        <img src="assets/images/Gambar 1.png"
+                            alt="Etalase Donat Manis berisi berbagai pilihan donat"/>
+                        <figcaption>
+                            Etalase Donat Manis menampilkan berbagai pilihan
+                            donat yang tersedia untuk pelanggan.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="media-card">
+                        <img src="assets/images/Gambar3.png"
+                            alt="Donat original Donat Manis"/>
+                        <figcaption>
+                            Pilihan donat original Donat klasik dengan rasa sederhana yang tetap lezat.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="media-card">
+                        <img src="assets/images/Gambar4.png"
+                            alt="Donat Kentang Donat Manis" />
+                        <figcaption>
+                             Pilihan Donat Kentang Lembut, empuk, dan memiliki cita rasa kentang yang khas.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="media-card">
+                        <img src="assets/images/Gambar 2.png"
+                            alt="Berbagai varian rasa dan topping donat Donat Manis" />
+                        <figcaption>
+                            Berbagai pilihan rasa dan topping donat yang
+                            tersedia di Donat Manis.
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Bagian audio -->
+            <section aria-labelledby="audio-title">
+                <h2 id="audio-title">Nada Penanda Kedai</h2>
+                <p id="audio-note"> Dengarkan nada penanda khas Donat Manis
+                     sambil melihat berbagai pilihan donat kami.</p>
+                <!-- Pemutar audio -->
+                <audio
+                    controls
+                    aria-describedby="audio-note"
+                    src="assets/audio/audio.mp3" >
+                    Browser Anda tidak mendukung pemutar audio.
+                </audio>
+            </section>
+        </main>
+        <!-- Footer website -->
+        <footer class="site-footer">
+            <p> &copy; 2026 Donat Manis. Data pada halaman ini bersifat dummy.</p>
+        </footer>
+    </body>
+</html>

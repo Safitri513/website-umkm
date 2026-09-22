@@ -1,25 +1,63 @@
-body {
+/* ===  TAMPILAN DASAR WEBSITE === */
+body {  /* Tampilan dasar halaman website */
   margin: 0;
   background: #fff4f8;
   color: #5a3038;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-.page {
+.page { /* Mengatur lebar dan posisi konten utama */
   max-width: 920px;
   margin: 0 auto;
   padding: 32px 20px;
 }
 
-.hero {
+/* === HEADER DAN NAVIGASI === */
+.site-header {  /* Mengatur bagian header website */
+  padding: 16px 20px;
+  background: #fffdfb;
+  border-bottom: 1px solid #f1d5da;
+}
+
+.nav {  /* Mengatur area navigasi */
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.brand { /* Mengatur nama/identitas Donat Manis */
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #b84f6b;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav ul { /* Mengatur daftar menu navigasi */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav li { /* Mengatur setiap item menu */
+  display: inline-block;
+  margin-right: 12px;
+}
+
+/* Menandai halaman yang sedang dibuka */
+.nav a[aria-current="page"] {
+  font-weight: 800;
+}
+
+/* === HALAMAN BERANDA === */
+.hero { /* Mengatur bagian utama/beranda */
   border-radius: 35px;
-  background: linear-gradient(135deg, #d86b85, #f3a0b3);
+  background: linear-gradient(135deg, #d27a91, #c9788c);
   color: white;
   padding: 36px;
   box-shadow: 0 10px 25px rgba(12, 107, 133, 0.2);
 }
 
-.eyebrow {
+.eyebrow {  /* Mengatur teks kecil yang berada di atas judul */
   margin: 0 0 8px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -27,16 +65,17 @@ body {
   opacity: 0.85;
 }
 
-h1 {
+h1 {  /* Mengatur judul utama halaman */
   margin: 0;
   font-size: clamp(2.4rem, 8vw, 4rem);
 }
 
-.lead {
+.lead { /* Mengatur paragraf pembuka pada hero */
   max-width: 560px;
   line-height: 1.7;
 }
 
+/* Mengatur tombol ajakan/action utama */
 .cta-button {
   border: 0;
   border-radius: 999px;
@@ -47,11 +86,10 @@ h1 {
   cursor: pointer;
 }
 
-#promoButton {
-  border-radius: 18px;
-}
+/* Mengatur khusus tombol dengan ID promoButton */
+#promoButton { border-radius: 18px; }
 
-.hero-actions {
+.hero-actions { /* Mengatur wadah tombol/link pada bagian hero */
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -61,7 +99,7 @@ h1 {
   border-radius: 20px;
 }
 
-.hero-actions button {
+.hero-actions button {  /* Tombol di dalam hero actions */
   border: none;
   border-radius: 14px;
   background: #d95f76;
@@ -71,7 +109,7 @@ h1 {
   cursor: pointer;
 }
 
-.hero-actions a {
+.hero-actions a { /* Link di dalam hero actions */
   border-radius: 14px;
   background: #fff4f8;
   color: #d95f76;
@@ -80,7 +118,7 @@ h1 {
   text-decoration: none;
 }
 
-.hero-image {
+.hero-image { /* Mengatur kotak tempat gambar hero */
   margin-top: 20px;
   padding: 18px;
   background: #fff;
@@ -89,23 +127,23 @@ h1 {
   box-shadow: 0 6px 18px rgba(90, 48, 56, 0.10);
 }
 
-.hero-image img {
+.hero-image img { /* Gambar di dalam hero */
   width: 350px;
   max-width: 100%;
   height: auto;
 }
 
-.products {
-  margin-top: 15px;
-}
+/* === BAGIAN PRODUK - BERANDA === */
+/* Mengatur bagian produk pada halaman beranda */
+.products { margin-top: 15px; }
 
-.product-list {
+.product-list { /* Mengatur susunan daftar produk */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
 }
 
-.product-card {
+.product-card { /* Mengatur tampilan kartu setiap produk */
   border: 1px solid #f1cbd3;
   border-radius: 18px;
   background: #fffdfb;
@@ -113,67 +151,388 @@ h1 {
   box-shadow: 0 10px 30px rgb(90 48 56 / 10%);
 }
 
-
-img {
-  width: 330px;
-  max-width: 100%;
-  height: auto;
+.product-card:hover { /* Efek saat kartu produk disentuh kursor */
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(90, 48, 56, 0.14);
 }
 
-.contact { 
-  margin-top: 32px; 
-  border: 1px solid #f1cbd3; 
-  border-radius: 18px; 
-  background: #fffdfb; padding: 18px; box-shadow: 0 10px 30px rgb(90 48 56 / 10%); } 
-  
-.contact h2 { margin-top: 0; } 
-.contact p { line-height: 1.6; } 
-.contact a { color: #d95f76; font-weight: 600; }
-
-.tentang-card {
-  background: #ece5e5;
-  padding: 28px;
-  border-radius: 20px;
-  margin-top: 25px;
-  box-shadow: 0 8px 20px rgba(90, 48, 56, 0.08);
-}
-
-.tentang-card h2 {
-  margin-top: 0;
-}
-
-.keunggulan {
-  background: #ffffff;
+/* === HALAMAN PRODUK === */
+.produk-header {  /* Kotak judul dan keterangan Produk */
+  margin: 25px 0 30px;
   padding: 28px 32px;
-  margin-top: 30px;
+  background: linear-gradient(135deg, #fffaf5, #f8e7e3);
+  border: 1px solid #e2b9b2;
   border-radius: 24px;
-  border: 1px solid #f3d5dc;
-  box-shadow: 0 8px 20px rgba(90, 48, 56, 0.10);
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(90, 48, 56, 0.10);
 }
 
-.keunggulan h2 {
+.produk-header h1 { /* Judul Produk Donat Manis */
+  margin: 0 0 12px;
+  color: #9d4f5d;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.produk-header h1::after { /* Garis di bawah judul Produk */
+  content: "";
+  display: block;
+  width: 400px;
+  height: 3px;
+  margin: 12px auto 0;
+  background: #d79a98;
+  border-radius: 10px;
+}
+
+.produk-header p {  /* Keterangan Produk */
+  max-width: 650px;
+  margin: 16px auto 0;
+  color: #654047;
+  line-height: 1.7;
+}
+
+/* --- Kategori Produk --- */
+/* Kotak kategori produk */
+section[aria-labelledby="kategori-title"] {
+  margin-top: 30px;
+  padding: 26px;
+  background: #fffdfb;
+  border: 1px solid #f1cbd3;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(90, 48, 56, 0.08);
+}
+
+/* Judul kategori */
+section[aria-labelledby="kategori-title"] h2 {
   margin-top: 0;
   margin-bottom: 18px;
   color: #b84f6b;
 }
 
-.keunggulan ul {
+/* Daftar kategori */
+section[aria-labelledby="kategori-title"] ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 0;
   margin: 0;
-  padding-left: 22px;
+  list-style: none;
 }
 
-.keunggulan li {
-  margin-bottom: 10px;
+/* Setiap kategori */
+section[aria-labelledby="kategori-title"] li {
+  padding: 18px;
+  background: #fff1f5;
+  border: 1px solid #f5d5dd;
+  border-radius: 16px;
+  font-weight: 600;
+  text-align: center;
 }
 
-.skip-link { position: absolute; left: -9999px; padding: 8px 12px; color: white; background: #5a3038; }
-.skip-link:focus { top: 8px; left: 8px; }
-.site-header { padding: 16px 20px; background: #fffdfb; border-bottom: 1px solid #f1d5da; }
-.nav { max-width: 920px; margin: 0 auto; }
-.brand { display: inline-block; margin-bottom: 8px; color: #b84f6b; font-weight: 800; text-decoration: none; }
-.nav ul { padding: 0; margin: 0; list-style: none; }
-.nav li { display: inline-block; margin-right: 12px; }
-.nav a[aria-current="page"] { font-weight: 800; }
+/* ---------- Daftar Harga ---------- */
+
+/* Kotak daftar harga */
+section[aria-labelledby="harga-title"] {
+  margin-top: 34px;
+  padding: 26px;
+  background: #fffdfb;
+  border: 1px solid #f1cbd3;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(90, 48, 56, 0.08);
+}
+
+/* Judul daftar harga */
+section[aria-labelledby="harga-title"] h2 {
+  margin-top: 0;
+  color: #b84f6b;
+}
+
+/* === TABEL PRODUK === */
+
+table { /* Tampilan tabel */
+  width: 100%; 
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #ead0d5;
+  border-radius: 14px;
+  background: white;
+}
+
+caption { /* Keterangan tabel */
+  margin-bottom: 8px;
+  color: #76545b;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Sel tabel */
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #dccbbc;
+}
+
+thead th { /* Kepala tabel */
+  background: #d95f76;
+  color: white;
+  font-weight: 700;
+}
+
+tbody th { /* Nama produk pada tabel */
+  color: #a94761;
+  background: #fff8fa;
+}
+
+tbody tr:hover {  /* Efek ketika baris tabel disentuh kursor */
+  background: #fff1f5;
+}
+
+/* --- HALAMAN TENTANG KAMI --- */
+.tentang-card { /* Kartu utama: teks dan gambar sejajar */
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 32px;
+  background: #fffdfb;
+  padding: 32px;
+  border-radius: 24px;
+  margin-top: 25px;
+  margin-bottom: 24px;
+  border: 1px solid #f1cbd3;
+  box-shadow: 0 8px 20px rgba(90, 48, 56, 0.08);
+}
+
+.tentang-text p:not(.eyebrow) { /* Paragraf */
+  line-height: 1.8;
+  margin-bottom: 16px;
+  padding: 16px 18px;
+  background: #fff8fa;
+  border: 1px solid #f1d5da;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(90, 48, 56, 0.05);
+}
+
+.tentang-text p:last-child {
+  margin-bottom: 0;
+}
+
+.tentang-text h1 { /* Judul Tentang Donat */
+  margin: 0 0 20px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, #fffaf5, #f8e7e3);
+  border: 1px solid #e2b9b2;
+  border-radius: 24px;
+  color: #9d4f5d;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  box-shadow: 0 8px 22px rgba(90, 48, 56, 0.10);
+}
+
+.tentang-image {  /* Kotak gambar */
+  background: #fff4f8;
+  padding: 5px;
+  border-radius: 18px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.tentang-image img {  /* Gambar */
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+
+
+/* ---- Keunggulan ---- */
+.keunggulan { /* Mengatur bagian Keunggulan Donat Manis */
+  background: linear-gradient(135deg, #fffaf5, #f8e7e3);
+  padding: 30px 32px;
+  margin-top: 30px;
+  border-radius: 24px;
+  border: 1px solid #e2b9b2;
+  box-shadow: 0 8px 20px rgba(90, 48, 56, 0.10);
+}
+
+.keunggulan h2 { /* Judul bagian Keunggulan */
+  margin: 0 0 22px;
+  padding-bottom: 12px;
+  color: #9d4f5d;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #d79a98;
+}
+
+.keunggulan ul { /* Daftar keunggulan */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.keunggulan li {  /* Setiap item keunggulan */
+  padding: 18px;
+  background: #f8d4d7;
+  border: 1px solid #e8c9c4;
+  border-radius: 18px;
+  line-height: 1.6;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(90, 48, 56, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* GAMBAR UMUM */
+img { /* Mengatur ukuran gambar */
+  max-width: 100%;
+  height: auto;
+}
+/* Mengatur figure pada galeri */
+figure { margin: 0 0 24px; }
+
+figcaption {  /* Keterangan gambar */
+  margin-top: 8px;
+  color: #6b5b52;
+}
+
+.contact {  /* Mengatur bagian Kontak Singkat */
+  margin-top: 32px;
+  padding: 18px;
+  border: 1px solid #f1cbd3;
+  border-radius: 18px;
+  background: #fffdfb;
+  box-shadow: 0 10px 30px rgb(90 48 56 / 10%);
+}
+
+/* Judul Kontak */
+.contact h2 { margin-top: 0;}
+/* Paragraf Kontak */
+.contact p { line-height: 1.6;}
+
+.contact a { /* Link Kontak */
+  color: #d95f76;
+  font-weight: 600;
+}
+
+/* Fitur aksesibilitas untuk pengguna keyboard */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  padding: 8px 12px;
+  color: white;
+  background: #5a3038;
+}
+
+/* Skip link muncul ketika mendapat fokus keyboard */
+.skip-link:focus {
+  top: 8px;
+  left: 8px;
+}
+
+/* Outline ketika link/tombol dipilih dengan Tab */
 a:focus-visible,
-button:focus-visible { outline: 3px solid #d95f76; outline-offset: 3px; }
-.site-footer { padding: 24px 20px; color: white; text-align: center; background: #6b3d45; }
+button:focus-visible {
+  outline: 3px solid #d95f76;
+  outline-offset: 3px;
+}
+
+.site-footer { /* Mengatur bagian footer website */
+  padding: 24px 20px;
+  color: white;
+  text-align: center;
+  background: #6b3d45;
+}
+
+/*--- GALERI ---*/
+/* Kotak judul halaman Galeri */ 
+.page > h1 { 
+  margin: 25px 0 30px; 
+  padding: 28px 32px; 
+  background: linear-gradient(135deg, #fffaf5, #f8e7e3); 
+  border: 1px solid #e2b9b2; 
+  border-radius: 24px; 
+  color: #9d4f5d; 
+  text-align: center; 
+  font-size: clamp(2rem, 5vw, 3rem); 
+  box-shadow: 0 8px 22px rgba(90, 48, 56, 0.10); 
+} 
+  
+/* Mengatur susunan gambar pada galeri */
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Mengatur kartu gambar galeri */
+.media-card {
+  margin: 0;
+  padding: 18px;
+  background: #fffdfb;
+  border: 1px solid #f1cbd3;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(90, 48, 56, 0.08);
+}
+
+/* kotak media */ 
+section[aria-labelledby="media-title"] { 
+  margin-top: 30px; 
+  padding: 28px; 
+  background: #fffdfb; 
+  border: 1px solid #f1cbd3; 
+  border-radius: 24px; 
+  box-shadow: 0 8px 22px rgba(90, 48, 56, 0.08); } 
+  
+/* Judul Media Usaha */ 
+section[aria-labelledby="media-title"] h2 { 
+  margin-top: 0; 
+  margin-bottom: 22px; 
+  color: #9d4f5d; 
+  font-size: 1.5rem; 
+  text-align: center; }
+
+/* Mengatur gambar galeri */
+.media-card img {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* Mengatur keterangan gambar */
+.media-card figcaption {
+  margin-top: 12px;
+  line-height: 1.6;
+  color: #6b4a51;
+}
+/*kotak audioO*/ 
+section[aria-labelledby="audio-title"] { 
+  margin-top: 30px; 
+  padding: 28px; 
+  background: #fffdfb; 
+  border: 1px solid #f1cbd3; 
+  border-radius: 24px; 
+  box-shadow: 0 8px 22px rgba(90, 48, 56, 0.08); } 
+/* Judul Nada Penanda Kedai */ 
+  section[aria-labelledby="audio-title"] h2 { 
+    margin-top: 0; 
+    margin-bottom: 12px; 
+    color: #9d4f5d; 
+    font-size: 1.5rem; 
+    text-align: center; } 
+
+/* Keterangan audio */ 
+section[aria-labelledby="audio-title"] p { 
+  color: #6b4a51; 
+  line-height: 1.6; 
+  text-align: center; } 
+  
+/* Pemutar audio */ 
+section[aria-labelledby="audio-title"] audio { 
+  display: block; 
+  width: 100%; 
+  margin-top: 18px; }
