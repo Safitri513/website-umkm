@@ -536,3 +536,29 @@ section[aria-labelledby="audio-title"] audio {
   display: block; 
   width: 100%; 
   margin-top: 18px; }
+
+.field { margin-bottom: 16px;} /* Mengatur jarak antar field pada form */
+.field label {display: block; margin-bottom: 6px;}
+/* Mengatur kotak pilihan seperti Topik dan Waktu Kontak */
+fieldset {
+  margin: 0 0 16px;
+  padding: 16px;
+  border: 1px solid #ead5d9;
+  border-radius: 12px;
+  background: #fffdfb;
+}
+/* Mengatur kotak utama form kontak */
+#form-kontak {
+  padding: 20px;
+  border: 1px solid #ead5d9;
+  border-radius: 16px;
+  background: #fffdfb;
+}
+/* Mengatur kotak hasil Preview Data */
+#preview-form {
+  padding: 16px;
+  white-space: pre-wrap;
+  background: white;
+  border: 1px solid #dccbbc;
+  border-radius: 10px;
+}
