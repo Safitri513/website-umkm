@@ -382,12 +382,16 @@ fieldset {
 /* === 10. LAYOUT P06: FLEXBOX === */
 .nav {
   display: flex;
+  flex-direction: column;
   gap: var(--space-3);
   align-items: center;
-  justify-content: space-between;
 }
 .brand { margin-bottom: 0; }
-.nav ul { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.nav ul { 
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2); 
+  flex-wrap: wrap; }
 .nav li { margin: 0; }
 
 .product-card { display: flex; flex-direction: column; }
@@ -411,7 +415,7 @@ fieldset {
 /* === 11. LAYOUT P06: GRID === */
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr;
   gap: var(--space-4);
   align-items: center;
 }
@@ -428,11 +432,9 @@ fieldset {
 .product-grid,
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--space-3);
 }
-.gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.product-grid .product-card { margin-block: 0; }
 
 .gallery-grid .media-card { margin-block: 0; }
 
@@ -446,10 +448,143 @@ fieldset {
   text-align: center;
 }
 
-/* Kategori produk: 3 kolom */
+/* Kategori produk: baseline mobile-first */
 section[aria-labelledby="kategori-title"] ul {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-3);
 }
 section[aria-labelledby="kategori-title"] li { margin-bottom: 0; }
+
+/* === 12. RESPONSIVE P07: TABEL === */
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll table {
+  width: 100%;
+  min-width: 40rem;
+}
+
+.table-scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+
+/* === 13. RESPONSIVE P07: BREAKPOINTS === */
+/* Mulai layar sedang: navigasi berjajar dan hero dua kolom */
+@media (min-width: 42rem) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Tablet: katalog, galeri, dan kategori menyesuaikan ruang */
+@media (min-width: 48rem) {
+  .product-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  section[aria-labelledby="kategori-title"] ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Layar lebar: katalog menampilkan tiga kartu per baris */
+@media (min-width: 60rem) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* === 14. PENYESUAIAN AKHIR P07: HP === */
+@media (max-width: 41.999rem) {
+  /* Navigasi lebih rapi di layar kecil */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+
+  .brand {
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav li {
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+
+  .nav li a {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Kartu produk tidak saling berhimpitan */
+  .product-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .product-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .product-card h2,
+  .product-card h3,
+  .product-card p {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .card-actions a,
+  .card-actions button {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    overflow-wrap: break-word;
+  }
+
+  /* Kategori dibuat lega di HP */
+  section[aria-labelledby="kategori-title"] ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
