@@ -588,3 +588,79 @@ section[aria-labelledby="kategori-title"] li { margin-bottom: 0; }
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+
+/* === P09: KARTU PRODUK DINAMIS === */
+
+.js-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.js-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.js-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.75rem rgb(90 48 56 / 0.15);
+}
+
+.js-product-card h3 {
+  margin: 0;
+  color: var(--color-primary-strong);
+}
+
+.js-product-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.js-product-card .price {
+  margin-top: var(--space-2);
+  color: var(--color-primary-strong);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.stock-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-top: var(--space-1);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.stock-badge.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.stock-badge.empty {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Penyesuaian layar kecil */
+@media (max-width: 30rem) {
+  .js-product-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
