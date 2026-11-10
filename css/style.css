@@ -664,3 +664,20 @@ section[aria-labelledby="kategori-title"] li { margin-bottom: 0; }
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Status stok produk */
+.stock-badge.warning {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Tampilan produk unggulan */
+#produk-unggulan {
+  font-weight: 700;
+  color: var(--color-primary, #6f3b1f);
+  margin-top: 8px;
+}
