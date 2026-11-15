@@ -681,3 +681,103 @@ section[aria-labelledby="kategori-title"] li { margin-bottom: 0; }
   color: var(--color-primary, #6f3b1f);
   margin-top: 8px;
 }
+
+/*  tombol filter & empty state  */
+.filter-bar {
+  gap: 0.6rem;
+}
+
+.filter-button {
+  border-color: #f6c9d6;
+  color: #5b3a45;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible {
+  border-color: #f0507a;
+  outline-color: rgb(240 80 122 / 20%);
+}
+
+.filter-button.is-active {
+  background: #f0507a;
+  border-color: #f0507a;
+  color: #ffffff;
+}
+
+#produk-grid .empty-state {
+  border-color: #f0a3b8;
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Perapihan isi kartu katalog */
+#produk-grid {
+  --warna-utama: #f0507a;
+  --warna-judul: #c2416b;
+  --warna-border: #f6c9d6;
+  --warna-teks: #5b3a45;
+  --warna-teks-halus: #8a6b75;
+}
+
+#produk-grid .product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-color: var(--warna-border);
+  color: var(--warna-teks);
+}
+
+#produk-grid .product-card h3 {
+  margin: 0;
+  color: var(--warna-judul);
+}
+
+#produk-grid .category-note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--warna-teks-halus);
+}
+
+#produk-grid .price {
+  margin: 0;
+  font-weight: 800;
+  color: var(--warna-utama);
+}
+
+/* Badge stok (kecil, tidak memanjang) */
+#produk-grid .stock-badge {
+  align-self: flex-start;
+  padding: 0.4rem 0.1 rem;
+  border-radius: 999px;
+  font-size: 0.1 rem;
+  font-weight: 700;
+  background: #dcfce7;
+  color: #166534;
+}
+
+#produk-grid .stock-badge.warning {
+  background: #fef3c7;
+  color:
+}
+
+.filter-button:not(.is-active) {
+  background: #ffffff;
+  color: #5b3a45;
+}
+
+#produk-grid .ghost-button {
+  margin-top: auto;
+  align-self: flex-start;
+  background: #fde2ea;  
+  color: #c2416b;        
+  border: 1px solid #f0507a;    
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;   
+  font-size: 0.75rem;        
+  font-weight: 700;
+  cursor: pointer;
+}

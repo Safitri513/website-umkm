@@ -116,6 +116,25 @@
                 </div>
                 <div id="produk-dinamis" class="js-product-grid"></div>
             </section>
+
+            <!-- Katalog dengan filter (dirender JavaScript) -->
+            <section class="product-section" aria-labelledby="produk-dinamis-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Katalog</p>
+                    <h2 id="produk-katalo-title">Produk Donat Manis</h2>
+                    <p id="produk-status" class="produk-status">Produk belum dimuat.</p>
+                </div>
+
+                <div class="filter-bar" aria-label="Filter kategori produk">
+                    <button type="button" class="filter-button is-active" data-filter="Semua">Semua</button>
+                    <button type="button" class="filter-button" data-filter="Original">Original</button>
+                    <button type="button" class="filter-button" data-filter="Kentang">Kentang</button>
+                    <button type="button" class="filter-button" data-filter="Paket Mix">Paket Mix</button>
+                </div>
+
+                <div id="produk-grid" class="product-grid" aria-live="polite"></div>
+            </section>
+
         </main>
         <footer class="site-footer">
             <p>&copy; 2026 Donat Manis. Data pada halaman ini bersifat dummy.</p>
