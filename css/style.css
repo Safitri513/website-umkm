@@ -761,7 +761,7 @@ section[aria-labelledby="kategori-title"] li { margin-bottom: 0; }
 
 #produk-grid .stock-badge.warning {
   background: #fef3c7;
-  color:
+  color: #92400e;
 }
 
 .filter-button:not(.is-active) {
@@ -780,4 +780,25 @@ section[aria-labelledby="kategori-title"] li { margin-bottom: 0; }
   font-size: 0.75rem;        
   font-weight: 700;
   cursor: pointer;
+}
+
+/* ===== Validasi form ===== */
+.field-error,
+.form-feedback {
+  margin: 0;
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.field-error {
+  min-height: 1.4rem;
+}
+
+[aria-invalid="true"] {
+  border-color: #b91c1c;
+  box-shadow: 0 0 0 3px rgb(185 28 28 / 15%);
+}
+
+.form-feedback.success {
+  color: #166534;
 }

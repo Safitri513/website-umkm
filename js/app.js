@@ -24,13 +24,6 @@ const produkUmkm = [
     stok: 0,
     unggulan: false,
   },
-  {
-    nama: "Donat Cokelat",
-    kategori: "Cokelat",
-    harga: 13000,
-    stok: 8,
-    unggulan: false,
-  },
 ];
 
 // Debugging setiap data produk
