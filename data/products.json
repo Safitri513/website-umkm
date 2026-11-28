@@ -1,0 +1,30 @@
+
+[
+  {
+    "id": "donat-original",
+    "name": "Donat Original",
+    "category": "Original",
+    "price": 10000,
+    "stock": 12,
+    "featured": true,
+    "description": "Donat klasik yang lembut dengan rasa sederhana yang tetap lezat."
+  },
+  {
+    "id": "donat-kentang",
+    "name": "Donat Kentang",
+    "category": "Kentang",
+    "price": 12000,
+    "stock": 4,
+    "featured": false,
+    "description": "Donat empuk dengan cita rasa kentang yang gurih dan khas."
+  },
+  {
+    "id": "paket-donat-mix",
+    "name": "Paket Donat Mix",
+    "category": "Paket Mix",
+    "price": 25000,
+    "stock": 0,
+    "featured": false,
+    "description": "Campuran donat original dan kentang untuk camilan lengkap."
+  }
+]
